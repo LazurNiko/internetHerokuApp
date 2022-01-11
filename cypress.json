@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://the-internet.herokuapp.com",
+  "testFiles": [
+    "dragNdrop.spec.js",
+    "fileUpload.spec.js",
+    "sliderHorizontal.spec.js"
+  ],
+  "chromeWebSecurity": false,
+  "ignoreTestFiles": [
+    "**/1-getting-started/*.js",
+    "**/2-advanced-examples/*.js"
+  ]
+}

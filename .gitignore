@@ -15,6 +15,8 @@ yarn-error.log*
 cypress/videos
 cypress/screenshots
 .nyc_output
+cypress/integration/1-getting-started/
+cypress/integration/2-advanced-examples/
 
 # Ignore env local files - https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used
 .env*.local

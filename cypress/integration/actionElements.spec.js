@@ -60,6 +60,34 @@ describe('Work with dragNdrop, slider, file upload etc', () => {
       .click();
   });
 
+  it('Should be able to select item from dropdown menu', () => {
+    cy.clickButton("Dropdown");
+    item.dropdownMenu().should("contain", "Please select an option")
+      .select("Option 2")
+    item.selectedOption().should("have.attr", "selected")
+  });
+
+  it('Should be able to check if image is broken', () => {
+    cy.clickButton("Broken Images");
+    item.brokenImageFirst()
+      .should('be.visible')
+      .and(($img) => {
+    expect($img[0].naturalHeight).to.be.equal(0)
+    });
+
+    item.brokenImageSecond()
+      .should('be.visible')
+      .and(($img) => {
+    expect($img[0].naturalHeight).to.be.equal(0)
+    });
+
+    item.correctImage()
+      .should('be.visible')
+      .and(($img) => {
+    expect($img[0].naturalHeight).to.be.greaterThan(0)
+    });
+});
+
   it('Should be able to see text when hover the element', () => {
     cy.clickButton("Hovers");
     item.element().eq(0).realHover();

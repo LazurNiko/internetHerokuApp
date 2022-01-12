@@ -27,7 +27,7 @@ class elements {
     return cy.get('my-paragraph');
   }
   clickToDownloadPng() {
-    cy.window().document().then(function (doc) {
+    return cy.window().document().then(function (doc) {
       doc.addEventListener('click', () => {
         setTimeout(function () { doc.location.reload() }, 500)
       })
@@ -35,12 +35,27 @@ class elements {
     })
   }
   clickToDownloadSql() {
-    cy.window().document().then(function (doc) {
+    return cy.window().document().then(function (doc) {
       doc.addEventListener('click', () => {
         setTimeout(function () { doc.location.reload() }, 500)
       })
       cy.get('[href="download/Chinook_Sqlite.sql"]').click();
     })
+  }
+  dropdownMenu() {
+    return cy.get("#dropdown");
+  }
+  selectedOption() {
+    return cy.contains("option", "Option 2");
+  }
+  brokenImageFirst() {
+    return cy.get('[src="asdf.jpg"');
+  }
+  brokenImageSecond() {
+    return cy.get('[src="hjkl.jpg"]');
+  }
+  correctImage() {
+    return cy.get('[src="img/avatar-blank.jpg"]');
   }
 }
 export default elements;

@@ -22,7 +22,7 @@ describe('Work with dragNdrop, slider, file upload etc', () => {
       })
     item.elementB().should("contain", "A")
     item.elementA().should("contain", "B")
-})
+  })
 
   it("Should be able to upload the file", () => {
     cy.clickButton("File Upload");
@@ -62,9 +62,11 @@ describe('Work with dragNdrop, slider, file upload etc', () => {
 
   it('Should be able to select item from dropdown menu', () => {
     cy.clickButton("Dropdown");
-    item.dropdownMenu().should("contain", "Please select an option")
+    item.dropdownMenu()
+      .should("contain", "Please select an option")
       .select("Option 2")
-    item.selectedOption().should("have.attr", "selected")
+    item.selectedOption()
+      .should("have.attr", "selected")
   });
 
   it('Should be able to check if image is broken', () => {
@@ -86,7 +88,7 @@ describe('Work with dragNdrop, slider, file upload etc', () => {
       .and(($img) => {
     expect($img[0].naturalHeight).to.be.greaterThan(0)
     });
-});
+  });
 
   it('Should be able to see text when hover the element', () => {
     cy.clickButton("Hovers");
@@ -99,6 +101,4 @@ describe('Work with dragNdrop, slider, file upload etc', () => {
     item.element().eq(2).realHover()
     item.elementContent().should('be.visible');
   });
-
-
 })

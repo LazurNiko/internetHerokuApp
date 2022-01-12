@@ -25,3 +25,6 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import "./clickButton";
 import 'cypress-file-upload';
+import '@4tw/cypress-drag-drop';
+import 'cypress-real-events';
+require('cy-verify-downloads').addCustomCommand();

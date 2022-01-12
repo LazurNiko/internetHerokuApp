@@ -1,10 +1,6 @@
 {
   "baseUrl": "http://the-internet.herokuapp.com",
-  "testFiles": [
-    "dragNdrop.spec.js",
-    "fileUpload.spec.js",
-    "sliderHorizontal.spec.js"
-  ],
+  "testFiles": "actionElements.spec.js",
   "chromeWebSecurity": false,
   "ignoreTestFiles": [
     "**/1-getting-started/*.js",

@@ -35,9 +35,9 @@ describe('Work with dragNdrop, slider, file upload etc', () => {
   it('Should be able to download the file', () => {
     cy.clickButton("File Download");
     item.clickToDownloadPng();
-    cy.verifyDownload('logo.png');
+    cy.verifyDownload('java.png');
     item.clickToDownloadSql();
-    cy.verifyDownload('Chinook_Sqlite.sql');
+    cy.verifyDownload('fileUpload.json');
   });
 
   it('Should be able to find shadow DOM elements', () => {

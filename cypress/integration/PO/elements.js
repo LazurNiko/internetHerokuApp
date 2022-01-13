@@ -31,7 +31,7 @@ class elements {
       doc.addEventListener('click', () => {
         setTimeout(function () { doc.location.reload() }, 500)
       })
-      cy.get('[href="download/logo.png"]').click();
+      cy.get('[href="download/java.png"]').click();
     })
   }
   clickToDownloadSql() {
@@ -39,7 +39,7 @@ class elements {
       doc.addEventListener('click', () => {
         setTimeout(function () { doc.location.reload() }, 500)
       })
-      cy.get('[href="download/Chinook_Sqlite.sql"]').click();
+      cy.get('[href="download/fileUpload.json"]').click();
     })
   }
   dropdownMenu() {
